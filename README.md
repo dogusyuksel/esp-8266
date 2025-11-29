@@ -116,20 +116,6 @@ phy_version: 1167.0, 14a6402, Feb 17 2022, 11:32:25, RTOS new
 --- exit ---
 ```
 
-## How to Test
-
-Goto tools and type
-
-```
-make
-```
-
-then edit the conf.json file. and finaly execute the below command
-
-```
-./tcp_client.exe -f conf.json
-```
-
 
 # Important Links
 
