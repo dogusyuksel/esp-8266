@@ -1,3 +1,8 @@
+## 2.0.0
+
+- SDK version fixed
+- Tools removed
+
 ## 1.0.0
 
 - CHANGELOG.md and VERSION added
