@@ -46,12 +46,8 @@ RUN cd / && \
 ENV PATH="/esp/xtensa-lx106-elf/bin:${PATH}"
 RUN cd / && \
     git clone --recursive https://github.com/espressif/ESP8266_RTOS_SDK.git ESP8266_RTOS_SDK && \
+    cd ESP8266_RTOS_SDK && git checkout 2f586ea43f18a7d818c32b746a73e3302ad14ce2 && cd - && \
     python3 -m pip install --user -r ESP8266_RTOS_SDK/requirements.txt
-
-RUN cd / && mkdir thirdparty && \
-    cd /thirdparty/ && git clone https://github.com/DaveGamble/cJSON.git cjson && \
-    cd /thirdparty/cjson && git checkout 87d8f0961a01bf09bef98ff89bae9fdec42181ee && \
-    mkdir build && cd build && cmake .. && make
 
 CMD ["/bin/bash"]
 
